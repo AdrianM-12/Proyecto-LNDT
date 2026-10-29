@@ -1,0 +1,154 @@
+/* cosas generales */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #07111f;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    color: #78e4d2;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+}
+
+img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* cabecera y pie */
+.cabecera,
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px 5%;
+    background: #14243a;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* secciones */
+section {
+    padding: 40px 5%;
+}
+
+.portada {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(#07111f88, #07111f88), url("images/space.jpg") center / cover;
+}
+
+.portada h2 {
+    font-size: 40px;
+}
+
+.tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tarjetas h2 {
+    width: 100%;
+}
+
+/* las tarjetas */
+article,
+figure,
+aside {
+    flex: 1 1 20%;
+    margin: 0;
+    padding: 12px;
+    background: #14243a;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* al pasar el raton la tarjeta sube y brilla */
+article:hover,
+figure:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px #78e4d2;
+}
+
+aside {
+    border-left: 4px solid #78e4d2;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #526078;
+    text-align: left;
+}
+
+/* tablet */
+@media (max-width: 900px) {
+
+    .cabecera,
+    .footer {
+        flex-direction: column;
+    }
+
+    .portada h2 {
+        font-size: 32px;
+    }
+
+    article,
+    figure,
+    aside {
+        flex-basis: 40%;
+    }
+}
+
+/* movil */
+@media (max-width: 600px) {
+
+    .cabecera,
+    .footer {
+        align-items: flex-start;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    section {
+        padding: 25px 5%;
+    }
+
+    .portada h2 {
+        font-size: 28px;
+    }
+
+    article,
+    figure,
+    aside {
+        flex-basis: 100%;
+    }
+}
