@@ -16,7 +16,7 @@ El diseño es responsive con **flexbox** y **media queries** para tres tamaños:
 
 ### Inspiración
 
-Diseño de Dribbble que he usado como inspiración: [PON AQUÍ EL ENLACE](https://dribbble.com/tags/web)
+Diseño de Dribbble que he usado como inspiración: [Space Themed Landing Page](https://dribbble.com/shots/21435075-Space-Themed-Landing-Page)
 
 ## Herramientas
 
@@ -32,7 +32,7 @@ Diseño de Dribbble que he usado como inspiración: [PON AQUÍ EL ENLACE](https:
 
 ## Autor
 
-- **Tu nombre** - [Tu usuario de GitHub](https://github.com/)
+- **A.M.H** - [AdrianM-12](https://github.com/AdrianM-12)
 
 ## Agradecimientos
 
