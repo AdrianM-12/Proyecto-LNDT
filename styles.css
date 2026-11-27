@@ -1,4 +1,6 @@
-/* cosas generales */
+/* =========================================================
+   BASE (solo lo imprescindible, no afecta a ninguna sección)
+   ========================================================= */
 * {
     box-sizing: border-box;
 }
@@ -10,24 +12,420 @@ body {
     font-family: Arial, sans-serif;
 }
 
-a {
+
+/* =========================================================
+   CABECERA  (header.cabecera)
+   ========================================================= */
+.cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px 5%;
+    background: #14243a;
+}
+
+.cabecera-titulo {
+}
+
+.cabecera-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cabecera-enlace {
     color: #78e4d2;
     text-decoration: none;
 }
 
-a:hover {
+.cabecera-enlace:hover {
     color: white;
 }
 
-img {
+/* enlaces sueltos (para cambiar solo uno) */
+.cabecera-enlace-planetas {
+}
+
+.cabecera-enlace-galeria {
+}
+
+.cabecera-enlace-exploracion {
+}
+
+/* tablet */
+@media (max-width: 900px) {
+    .cabecera {
+        flex-direction: column;
+    }
+}
+
+/* movil */
+@media (max-width: 600px) {
+    .cabecera {
+        align-items: flex-start;
+    }
+
+    .cabecera-menu {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+
+/* =========================================================
+   PORTADA  (section.portada)
+   ========================================================= */
+.portada {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px 5%;
+    background: linear-gradient(#07111f88, #07111f88), url("images/space.jpg") center / cover;
+}
+
+.portada-titulo {
+    font-size: 40px;
+}
+
+.portada-texto {
+}
+
+/* tablet */
+@media (max-width: 900px) {
+    .portada-titulo {
+        font-size: 32px;
+    }
+}
+
+/* movil */
+@media (max-width: 600px) {
+    .portada {
+        padding: 25px 5%;
+    }
+
+    .portada-titulo {
+        font-size: 28px;
+    }
+}
+
+
+/* =========================================================
+   PLANETAS  (section#planetas.planetas)
+   ========================================================= */
+.planetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px 5%;
+}
+
+.planetas-titulo {
+    width: 100%;
+}
+
+/* cada tarjeta de planeta (article.planeta) */
+.planeta {
+    flex: 1 1 20%;
+    margin: 0;
+    padding: 12px;
+    background: #14243a;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* al pasar el raton la tarjeta sube y brilla */
+.planeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px #78e4d2;
+}
+
+.planeta-img {
     width: 100%;
     height: 150px;
     object-fit: cover;
     border-radius: 6px;
 }
 
-/* cabecera y pie */
-.cabecera,
+.planeta-nombre {
+}
+
+.planeta-texto {
+}
+
+/* planetas sueltos (para cambiar solo uno) */
+.planeta-mercurio {
+}
+
+.planeta-venus {
+}
+
+.planeta-tierra {
+}
+
+.planeta-marte {
+}
+
+.planeta-jupiter {
+}
+
+.planeta-saturno {
+}
+
+.planeta-urano {
+}
+
+.planeta-neptuno {
+}
+
+/* tablet */
+@media (max-width: 900px) {
+    .planeta {
+        flex-basis: 40%;
+    }
+}
+
+/* movil */
+@media (max-width: 600px) {
+    .planetas {
+        padding: 25px 5%;
+    }
+
+    .planeta {
+        flex-basis: 100%;
+    }
+}
+
+
+/* =========================================================
+   GALERIA  (section#galeria.galeria)
+   ========================================================= */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px 5%;
+}
+
+.galeria-titulo {
+    width: 100%;
+}
+
+/* cada foto (figure.foto) */
+.foto {
+    flex: 1 1 20%;
+    margin: 0;
+    padding: 12px;
+    background: #14243a;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* al pasar el raton la foto sube y brilla */
+.foto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px #78e4d2;
+}
+
+.foto-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.foto-texto {
+}
+
+/* fotos sueltas (para cambiar solo una) */
+.foto-espacio {
+}
+
+.foto-galaxias {
+}
+
+.foto-tierra {
+}
+
+.foto-marte {
+}
+
+.foto-saturno {
+}
+
+.foto-venus {
+}
+
+.foto-jupiter {
+}
+
+.foto-neptuno {
+}
+
+.foto-urano {
+}
+
+.foto-mercurio {
+}
+
+/* tablet */
+@media (max-width: 900px) {
+    .foto {
+        flex-basis: 40%;
+    }
+}
+
+/* movil */
+@media (max-width: 600px) {
+    .galeria {
+        padding: 25px 5%;
+    }
+
+    .foto {
+        flex-basis: 100%;
+    }
+}
+
+
+/* =========================================================
+   EXPLORACION  (section#exploracion.exploracion)
+   ========================================================= */
+.exploracion {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px 5%;
+}
+
+.exploracion-titulo {
+    width: 100%;
+}
+
+/* ---- article.fechas ---- */
+.fechas {
+    flex: 1 1 20%;
+    margin: 0;
+    padding: 12px;
+    background: #14243a;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.fechas:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px #78e4d2;
+}
+
+.fechas-titulo {
+}
+
+.fechas-lista {
+}
+
+.fechas-item {
+}
+
+/* ---- aside.curiosidad ---- */
+.curiosidad {
+    flex: 1 1 20%;
+    margin: 0;
+    padding: 12px;
+    background: #14243a;
+    border-radius: 10px;
+    transition: 0.3s;
+    border-left: 4px solid #78e4d2;
+}
+
+.curiosidad-titulo {
+}
+
+.curiosidad-texto {
+}
+
+/* ---- article.comparacion ---- */
+.comparacion {
+    flex: 1 1 20%;
+    margin: 0;
+    padding: 12px;
+    background: #14243a;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.comparacion:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px #78e4d2;
+}
+
+.comparacion-titulo {
+}
+
+.comparacion-tabla {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.comparacion-cabeza {
+}
+
+.comparacion-cuerpo {
+}
+
+.comparacion-fila {
+}
+
+.comparacion-th {
+    padding: 12px;
+    border: 1px solid #526078;
+    text-align: left;
+}
+
+.comparacion-td {
+    padding: 12px;
+    border: 1px solid #526078;
+    text-align: left;
+}
+
+/* tablet */
+@media (max-width: 900px) {
+    .fechas {
+        flex-basis: 40%;
+    }
+
+    .curiosidad {
+        flex-basis: 40%;
+    }
+
+    .comparacion {
+        flex-basis: 40%;
+    }
+}
+
+/* movil */
+@media (max-width: 600px) {
+    .exploracion {
+        padding: 25px 5%;
+    }
+
+    .fechas {
+        flex-basis: 100%;
+    }
+
+    .curiosidad {
+        flex-basis: 100%;
+    }
+
+    .comparacion {
+        flex-basis: 100%;
+    }
+}
+
+
+/* =========================================================
+   FOOTER  (footer.footer)
+   ========================================================= */
 .footer {
     display: flex;
     justify-content: space-between;
@@ -38,117 +436,55 @@ img {
     background: #14243a;
 }
 
-.menu {
+.footer-texto {
+}
+
+.footer-enlace {
+    color: #78e4d2;
+    text-decoration: none;
+}
+
+.footer-enlace:hover {
+    color: white;
+}
+
+.footer-menu {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-/* secciones */
-section {
-    padding: 40px 5%;
+.footer-red {
+    color: #78e4d2;
+    text-decoration: none;
 }
 
-.portada {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 100vh;
-    background: linear-gradient(#07111f88, #07111f88), url("images/space.jpg") center / cover;
+.footer-red:hover {
+    color: white;
 }
 
-.portada h2 {
-    font-size: 40px;
+/* redes sueltas (para cambiar solo una) */
+.footer-red-github {
 }
 
-.tarjetas {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.tarjetas h2 {
-    width: 100%;
-}
-
-/* las tarjetas */
-article,
-figure,
-aside {
-    flex: 1 1 20%;
-    margin: 0;
-    padding: 12px;
-    background: #14243a;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-/* al pasar el raton la tarjeta sube y brilla */
-article:hover,
-figure:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 15px #78e4d2;
-}
-
-aside {
-    border-left: 4px solid #78e4d2;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-th,
-td {
-    padding: 12px;
-    border: 1px solid #526078;
-    text-align: left;
+.footer-red-instagram {
 }
 
 /* tablet */
 @media (max-width: 900px) {
-
-    .cabecera,
     .footer {
         flex-direction: column;
-    }
-
-    .portada h2 {
-        font-size: 32px;
-    }
-
-    article,
-    figure,
-    aside {
-        flex-basis: 40%;
     }
 }
 
 /* movil */
 @media (max-width: 600px) {
-
-    .cabecera,
     .footer {
         align-items: flex-start;
     }
 
-    .menu {
+    .footer-menu {
         flex-direction: column;
         gap: 12px;
-    }
-
-    section {
-        padding: 25px 5%;
-    }
-
-    .portada h2 {
-        font-size: 28px;
-    }
-
-    article,
-    figure,
-    aside {
-        flex-basis: 100%;
     }
 }
